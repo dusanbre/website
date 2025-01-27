@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000" # Go Fiber
+    volumes:
+      - ./:/usr/src/app
+    command: air main.go -b 0.0.0.0
+  node:
+    image: node:22
+    working_dir: /app
+    volumes:
+      - ./:/app
+    command: npm run dev
