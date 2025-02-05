@@ -1,4 +1,5 @@
 .idea
+.fleet
 /static
 /tmp
 /node_modules
